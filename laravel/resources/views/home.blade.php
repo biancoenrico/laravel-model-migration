@@ -4,38 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <ul>
+    <div class="container">
+        <div class="content">
             @foreach ( $travels as $item )
-                <li>
-                    seats: {{ $item['seats'] }}
-                </li>
-                <li>
-                    @if ( $item['available'] == true)
-                        available
-                    @else
-                        unavailable
-                    @endif
+                <ul>
+                    <li class="banner">
+                        <img src="{{ $item['img'] }}" alt="">
+                    </li>
+                    <li>
+                        seats: <span></span>{{ $item['seats'] }}
+                    </li>
+                    <li>
+                        available:
+                        @if ( $item['available'] == true)
+                            <span>yes</span>
+                        @else
+                            <span>no</span>
+                        @endif
 
-                </li>
-                <li>
-                    from: {{ $item['from'] }}
-                </li>
-                <li>
-                    to: {{ $item['to'] }}
-                </li>
-                <li>
-                    distance: {{ $item['distance'] }} km
-                </li>
-                <li>
-                    price: {{ $item['price'] }}$
-                </li>
-                <br>
+                    </li>
+                    <li>
+                        from: <span>{{ $item['from'] }}</span>
+                    </li>
+                    <li>
+                        to: <span>{{ $item['to'] }}</span>
+                    </li>
+                    <li>
+                        distance: <span>{{ $item['distance'] }}km</span>
+                    </li>
+                    <li>
+                        price: <span>{{ $item['price'] }}$</span>
+                    </li>
+                </ul>
             @endforeach
-        </ul>
+        </div>
     </div>
 </body>
 </html>

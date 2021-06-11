@@ -15,6 +15,7 @@ class CreateTravelsTable extends Migration
     {
         Schema::create('travels', function (Blueprint $table) {
             $table->id();
+            $table->string('img', 150);
             $table->boolean('available');
             $table->string('from', 50);
             $table->string('to', 50);

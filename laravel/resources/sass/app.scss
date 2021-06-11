@@ -1,1 +1,50 @@
-//
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightskyblue;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    margin-top: 200px;
+
+    .content{
+        display: flex;
+        justify-content: space-around;
+        ul{
+            background-color: gray;
+            border: 1px solid lightgray;
+            padding: 20px;
+            background-color: whitesmoke;
+            li{
+                list-style-type: none;
+                font-size: 22px;
+                font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
+                border:1px solid lightcyan;
+                padding: 10px 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .banner{
+                padding: 0%;
+                border: none;
+                overflow: hidden;
+                width: 300px;
+                height: 200px;
+                background-color: white;
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            span{
+                text-align: right;
+            }
+        }
+    }
+}
